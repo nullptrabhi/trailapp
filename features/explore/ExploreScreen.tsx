@@ -74,9 +74,9 @@ export function ExploreScreen() {
             onPress={chooseCity}
             style={({ pressed }) => [styles.cityButton, pressed && styles.pressed]}
           >
-            <MaterialCommunityIcons color={colors.green} name="map-marker-outline" size={17} />
+            <MaterialCommunityIcons color={colors.primary} name="map-marker-outline" size={17} />
             <Text style={styles.cityText}>{city}</Text>
-            <MaterialCommunityIcons color={colors.muted} name="chevron-down" size={17} />
+            <MaterialCommunityIcons color={colors.textSecondary} name="chevron-down" size={17} />
           </Pressable>
         </View>
 
@@ -102,10 +102,10 @@ export function ExploreScreen() {
         </View>
 
         <View style={styles.sectionIntro}>
-          <Text style={styles.eyebrow}>A FRESH PERSPECTIVE</Text>
-          <Text style={styles.headline}>Find your kind of{'\n'}out there.</Text>
+          <Text style={styles.eyebrow}>CURATED FOR {city.toUpperCase()}</Text>
+          <Text style={styles.headline}>Make the day your own.</Text>
           <Text style={styles.introCopy}>
-            Places and experiences to make today feel a little different.
+            Thoughtful places and easy plans for wherever the day takes you.
           </Text>
         </View>
 
@@ -129,7 +129,7 @@ export function ExploreScreen() {
 
         {popularPlaces.length > 0 ? (
           <View style={styles.section}>
-            <SectionHeading title="A few places to start" />
+            <SectionHeading title="Popular near you" />
             <ScrollView
               horizontal
               showsHorizontalScrollIndicator={false}
@@ -187,13 +187,13 @@ const styles = StyleSheet.create({
     paddingTop: spacing.xs,
   },
   wordmark: {
-    color: colors.green,
+    color: colors.primary,
     fontSize: 30,
     fontWeight: '800',
     letterSpacing: -1.6,
   },
   tagline: {
-    color: colors.muted,
+    color: colors.textSecondary,
     fontSize: 12,
     marginTop: -2,
   },
@@ -208,7 +208,7 @@ const styles = StyleSheet.create({
     paddingVertical: 9,
   },
   cityText: {
-    color: colors.ink,
+    color: colors.textPrimary,
     fontSize: 13,
     fontWeight: '600',
     marginHorizontal: 5,
@@ -228,13 +228,13 @@ const styles = StyleSheet.create({
     marginTop: spacing.xxl,
   },
   eyebrow: {
-    color: colors.green,
+    color: colors.primary,
     fontSize: 11,
     fontWeight: '700',
     letterSpacing: 1.15,
   },
   headline: {
-    color: colors.ink,
+    color: colors.textPrimary,
     fontSize: 34,
     fontWeight: '700',
     letterSpacing: -1.1,
@@ -242,7 +242,7 @@ const styles = StyleSheet.create({
     marginTop: spacing.sm,
   },
   introCopy: {
-    color: colors.muted,
+    color: colors.textSecondary,
     fontSize: 14,
     lineHeight: 21,
     marginTop: spacing.sm,
@@ -258,7 +258,7 @@ const styles = StyleSheet.create({
     marginBottom: spacing.md,
   },
   footer: {
-    color: colors.muted,
+    color: colors.textSecondary,
     fontSize: 12,
     paddingTop: spacing.sm,
     textAlign: 'center',

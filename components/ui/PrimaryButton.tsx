@@ -30,7 +30,7 @@ export function PrimaryButton({
     >
       {icon ? (
         <MaterialCommunityIcons
-          color={outlined ? colors.green : colors.white}
+          color={outlined ? colors.primary : colors.white}
           name={icon}
           size={19}
         />
@@ -43,8 +43,8 @@ export function PrimaryButton({
 const styles = StyleSheet.create({
   button: {
     alignItems: 'center',
-    backgroundColor: colors.green,
-    borderColor: colors.green,
+    backgroundColor: colors.primary,
+    borderColor: colors.primary,
     borderRadius: radii.md,
     borderWidth: 1,
     flexDirection: 'row',
@@ -66,6 +66,6 @@ const styles = StyleSheet.create({
     marginLeft: spacing.sm,
   },
   outlinedLabel: {
-    color: colors.green,
+    color: colors.primary,
   },
 });

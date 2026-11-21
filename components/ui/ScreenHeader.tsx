@@ -32,13 +32,13 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   title: {
-    color: colors.ink,
+    color: colors.textPrimary,
     fontSize: 28,
     fontWeight: '700',
     letterSpacing: -0.8,
   },
   subtitle: {
-    color: colors.muted,
+    color: colors.textSecondary,
     fontSize: 14,
     lineHeight: 20,
     marginTop: spacing.xs,

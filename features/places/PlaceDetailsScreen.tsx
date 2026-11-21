@@ -68,7 +68,7 @@ export function PlaceDetailsScreen() {
             onPress={() => router.back()}
             style={({ pressed }) => [styles.heroAction, styles.backButton, pressed && styles.pressed]}
           >
-            <MaterialCommunityIcons color={colors.ink} name="arrow-left" size={21} />
+            <MaterialCommunityIcons color={colors.textPrimary} name="arrow-left" size={21} />
           </Pressable>
           <Pressable
             accessibilityLabel={isSaved ? 'Remove from saved places' : 'Save this place'}
@@ -77,7 +77,7 @@ export function PlaceDetailsScreen() {
             style={({ pressed }) => [styles.heroAction, styles.saveButton, pressed && styles.pressed]}
           >
             <MaterialCommunityIcons
-              color={isSaved ? colors.green : colors.ink}
+              color={isSaved ? colors.primary : colors.textPrimary}
               name={isSaved ? 'bookmark' : 'bookmark-outline'}
               size={21}
             />
@@ -114,13 +114,13 @@ export function PlaceDetailsScreen() {
               <View key={`${place.id}-${note.author}`} style={styles.noteCard}>
                 <View style={styles.noteHeading}>
                   <View style={styles.noteAvatar}>
-                    <MaterialCommunityIcons color={colors.green} name="account-outline" size={18} />
+                    <MaterialCommunityIcons color={colors.primary} name="account-outline" size={18} />
                   </View>
                   <View style={styles.noteAuthor}>
                     <Text style={styles.noteName}>{note.author}</Text>
                     <Text style={styles.noteOccasion}>{note.occasion}</Text>
                   </View>
-                  <MaterialCommunityIcons color={colors.amber} name="star-outline" size={18} />
+                  <MaterialCommunityIcons color={colors.primary} name="chat-processing-outline" size={18} />
                 </View>
                 <Text style={styles.noteText}>{note.note}</Text>
               </View>
@@ -129,7 +129,7 @@ export function PlaceDetailsScreen() {
 
           <PrimaryButton
             icon="directions"
-            label="Explore this place"
+            label="Open in Maps"
             onPress={() => openMaps(place)}
           />
           <Text style={styles.photoNote}>Photos are illustrative. Check local details before you go.</Text>
@@ -148,7 +148,7 @@ interface InfoRowProps {
 function InfoRow({ icon, label, value }: InfoRowProps) {
   return (
     <View style={styles.infoRow}>
-      <MaterialCommunityIcons color={colors.green} name={icon} size={19} />
+      <MaterialCommunityIcons color={colors.primary} name={icon} size={19} />
       <View style={styles.infoCopy}>
         <Text style={styles.infoLabel}>{label}</Text>
         <Text style={styles.infoValue}>{value}</Text>
@@ -177,7 +177,7 @@ const styles = StyleSheet.create({
   },
   heroScrim: {
     ...StyleSheet.absoluteFill,
-    backgroundColor: 'rgba(15, 25, 20, 0.4)',
+    backgroundColor: colors.scrim,
   },
   heroAction: {
     alignItems: 'center',
@@ -202,7 +202,7 @@ const styles = StyleSheet.create({
     padding: spacing.xl,
   },
   heroCategory: {
-    color: 'rgba(255,255,255,0.88)',
+    color: colors.whiteMuted,
     fontSize: 11,
     fontWeight: '700',
     letterSpacing: 1.1,
@@ -230,7 +230,7 @@ const styles = StyleSheet.create({
     paddingTop: spacing.xl,
   },
   description: {
-    color: colors.ink,
+    color: colors.textPrimary,
     fontSize: 16,
     lineHeight: 25,
   },
@@ -252,11 +252,11 @@ const styles = StyleSheet.create({
     marginLeft: spacing.md,
   },
   infoLabel: {
-    color: colors.muted,
+    color: colors.textSecondary,
     fontSize: 12,
   },
   infoValue: {
-    color: colors.ink,
+    color: colors.textPrimary,
     fontSize: 14,
     fontWeight: '600',
     lineHeight: 20,
@@ -271,13 +271,13 @@ const styles = StyleSheet.create({
     marginTop: spacing.xxl,
   },
   sectionTitle: {
-    color: colors.ink,
+    color: colors.textPrimary,
     fontSize: 20,
     fontWeight: '700',
     letterSpacing: -0.35,
   },
   sectionSubtitle: {
-    color: colors.muted,
+    color: colors.textSecondary,
     fontSize: 13,
     marginTop: spacing.xs,
   },
@@ -295,7 +295,7 @@ const styles = StyleSheet.create({
   },
   noteAvatar: {
     alignItems: 'center',
-    backgroundColor: colors.greenSoft,
+    backgroundColor: colors.primaryLight,
     borderRadius: radii.pill,
     height: 34,
     justifyContent: 'center',
@@ -306,23 +306,23 @@ const styles = StyleSheet.create({
     marginLeft: spacing.sm,
   },
   noteName: {
-    color: colors.ink,
+    color: colors.textPrimary,
     fontSize: 13,
     fontWeight: '700',
   },
   noteOccasion: {
-    color: colors.muted,
+    color: colors.textSecondary,
     fontSize: 11,
     marginTop: 2,
   },
   noteText: {
-    color: colors.ink,
+    color: colors.textPrimary,
     fontSize: 14,
     lineHeight: 21,
     marginTop: spacing.md,
   },
   photoNote: {
-    color: colors.muted,
+    color: colors.textSecondary,
     fontSize: 11,
     lineHeight: 16,
     marginTop: spacing.md,

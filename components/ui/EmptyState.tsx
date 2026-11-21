@@ -22,7 +22,7 @@ export function EmptyState({
   return (
     <View style={styles.container}>
       <View style={styles.iconWrap}>
-        <MaterialCommunityIcons color={colors.green} name={icon} size={27} />
+        <MaterialCommunityIcons color={colors.primary} name={icon} size={27} />
       </View>
       <Text style={styles.title}>{title}</Text>
       <Text style={styles.description}>{description}</Text>
@@ -43,21 +43,21 @@ const styles = StyleSheet.create({
   },
   iconWrap: {
     alignItems: 'center',
-    backgroundColor: colors.greenSoft,
+    backgroundColor: colors.primaryLight,
     borderRadius: 28,
     height: 56,
     justifyContent: 'center',
     width: 56,
   },
   title: {
-    color: colors.ink,
+    color: colors.textPrimary,
     fontSize: 18,
     fontWeight: '700',
     marginTop: spacing.lg,
     textAlign: 'center',
   },
   description: {
-    color: colors.muted,
+    color: colors.textSecondary,
     fontSize: 14,
     lineHeight: 21,
     marginTop: spacing.sm,

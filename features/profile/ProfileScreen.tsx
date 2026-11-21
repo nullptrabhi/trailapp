@@ -42,7 +42,7 @@ export function ProfileScreen() {
             <Text style={styles.name}>Mira Shah</Text>
             <Text style={styles.profileNote}>Local preview profile · {city}</Text>
           </View>
-          <MaterialCommunityIcons color={colors.muted} name="account-circle-outline" size={24} />
+          <MaterialCommunityIcons color={colors.textSecondary} name="account-circle-outline" size={24} />
         </View>
         <Text style={styles.disclaimer}>
           No account is connected. Your saved places and activity stay on this device.
@@ -125,10 +125,10 @@ function SettingsRow({ icon, label, onPress, value }: SettingsRowProps) {
       onPress={onPress}
       style={({ pressed }) => [styles.settingsRow, pressed && styles.pressed]}
     >
-      <MaterialCommunityIcons color={colors.green} name={icon} size={20} />
+      <MaterialCommunityIcons color={colors.primary} name={icon} size={20} />
       <Text style={styles.settingsLabel}>{label}</Text>
       {value ? <Text style={styles.settingsValue}>{value}</Text> : null}
-      <MaterialCommunityIcons color={colors.muted} name="chevron-right" size={20} />
+      <MaterialCommunityIcons color={colors.textSecondary} name="chevron-right" size={20} />
     </Pressable>
   );
 }
@@ -154,14 +154,14 @@ const styles = StyleSheet.create({
   },
   avatar: {
     alignItems: 'center',
-    backgroundColor: colors.greenSoft,
+    backgroundColor: colors.primaryLight,
     borderRadius: radii.pill,
     height: 54,
     justifyContent: 'center',
     width: 54,
   },
   avatarText: {
-    color: colors.green,
+    color: colors.primary,
     fontSize: 21,
     fontWeight: '700',
   },
@@ -170,17 +170,17 @@ const styles = StyleSheet.create({
     marginLeft: spacing.md,
   },
   name: {
-    color: colors.ink,
+    color: colors.textPrimary,
     fontSize: 17,
     fontWeight: '700',
   },
   profileNote: {
-    color: colors.muted,
+    color: colors.textSecondary,
     fontSize: 12,
     marginTop: 3,
   },
   disclaimer: {
-    color: colors.muted,
+    color: colors.textSecondary,
     fontSize: 12,
     lineHeight: 18,
     marginHorizontal: spacing.xs,
@@ -202,12 +202,12 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   statNumber: {
-    color: colors.ink,
+    color: colors.textPrimary,
     fontSize: 21,
     fontWeight: '700',
   },
   statLabel: {
-    color: colors.muted,
+    color: colors.textSecondary,
     fontSize: 12,
     marginTop: 3,
   },
@@ -227,7 +227,7 @@ const styles = StyleSheet.create({
     borderColor: colors.border,
     borderRadius: radii.md,
     borderWidth: 1,
-    color: colors.muted,
+    color: colors.textSecondary,
     fontSize: 14,
     padding: spacing.lg,
   },
@@ -244,14 +244,14 @@ const styles = StyleSheet.create({
     opacity: 0.75,
   },
   settingsLabel: {
-    color: colors.ink,
+    color: colors.textPrimary,
     flex: 1,
     fontSize: 14,
     fontWeight: '600',
     marginLeft: spacing.md,
   },
   settingsValue: {
-    color: colors.muted,
+    color: colors.textSecondary,
     fontSize: 13,
     marginRight: spacing.sm,
   },

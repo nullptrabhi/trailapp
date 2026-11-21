@@ -22,7 +22,7 @@ export function SearchBar({
 }: SearchBarProps) {
   return (
     <View style={styles.container}>
-      <MaterialCommunityIcons color={colors.muted} name="magnify" size={22} />
+      <MaterialCommunityIcons color={colors.textSecondary} name="magnify" size={22} />
       <TextInput
         accessibilityLabel="Search places and activities"
         autoCapitalize="none"
@@ -31,9 +31,9 @@ export function SearchBar({
         editable={editable}
         onChangeText={onChangeText}
         placeholder={placeholder}
-        placeholderTextColor={colors.muted}
+        placeholderTextColor={colors.textSecondary}
         returnKeyType="search"
-        selectionColor={colors.green}
+        selectionColor={colors.primary}
         style={styles.input}
         value={value}
       />
@@ -43,7 +43,7 @@ export function SearchBar({
           onPress={onClear}
           style={({ pressed }) => [styles.clearButton, pressed && styles.pressed]}
         >
-          <MaterialCommunityIcons color={colors.muted} name="close-circle" size={19} />
+          <MaterialCommunityIcons color={colors.textSecondary} name="close-circle" size={19} />
         </Pressable>
       ) : null}
     </View>
@@ -69,10 +69,10 @@ const styles = StyleSheet.create({
     width: 32,
   },
   pressed: {
-    backgroundColor: colors.greenSoft,
+    backgroundColor: colors.primaryLight,
   },
   input: {
-    color: colors.ink,
+    color: colors.textPrimary,
     flex: 1,
     fontSize: 15,
     marginLeft: spacing.md,

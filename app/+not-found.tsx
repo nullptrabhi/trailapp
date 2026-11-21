@@ -29,18 +29,18 @@ const styles = StyleSheet.create({
     padding: spacing.xl,
   },
   title: {
-    color: colors.ink,
+    color: colors.textPrimary,
     fontSize: 26,
     fontWeight: '700',
   },
   description: {
-    color: colors.muted,
+    color: colors.textSecondary,
     fontSize: 15,
     marginTop: spacing.sm,
   },
   link: {
     alignSelf: 'flex-start',
-    color: colors.green,
+    color: colors.primary,
     fontSize: 15,
     fontWeight: '700',
     marginTop: spacing.xl,

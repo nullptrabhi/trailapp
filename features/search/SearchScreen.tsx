@@ -124,7 +124,7 @@ const styles = StyleSheet.create({
     marginTop: spacing.xl,
   },
   resultCount: {
-    color: colors.muted,
+    color: colors.textSecondary,
     fontSize: 13,
     fontWeight: '600',
     marginBottom: spacing.md,

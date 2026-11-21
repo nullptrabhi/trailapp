@@ -23,7 +23,7 @@ export function CategoryChip({ category, selected, onPress }: CategoryChipProps)
       ]}
     >
       <MaterialCommunityIcons
-        color={selected ? colors.white : colors.green}
+        color={selected ? colors.white : colors.primary}
         name={category.icon}
         size={16}
       />
@@ -45,14 +45,14 @@ const styles = StyleSheet.create({
     paddingVertical: 10,
   },
   selected: {
-    backgroundColor: colors.green,
-    borderColor: colors.green,
+    backgroundColor: colors.primary,
+    borderColor: colors.primary,
   },
   pressed: {
     opacity: 0.82,
   },
   label: {
-    color: colors.ink,
+    color: colors.textPrimary,
     fontSize: 13,
     fontWeight: '600',
     marginLeft: spacing.sm,

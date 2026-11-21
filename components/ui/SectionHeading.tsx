@@ -29,13 +29,13 @@ const styles = StyleSheet.create({
     marginBottom: spacing.md,
   },
   title: {
-    color: colors.ink,
+    color: colors.textPrimary,
     fontSize: 19,
     fontWeight: '700',
     letterSpacing: -0.25,
   },
   action: {
-    color: colors.green,
+    color: colors.primary,
     fontSize: 13,
     fontWeight: '700',
   },

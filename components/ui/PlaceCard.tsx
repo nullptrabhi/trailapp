@@ -74,7 +74,7 @@ export function PlaceCard({
           </Text>
           <View style={styles.location}>
             <MaterialCommunityIcons
-              color={isFeatured ? 'rgba(255,255,255,0.82)' : colors.muted}
+              color={isFeatured ? colors.whiteMuted : colors.textSecondary}
               name="map-marker-outline"
               size={14}
             />
@@ -99,7 +99,7 @@ export function PlaceCard({
           ]}
         >
           <MaterialCommunityIcons
-            color={isSaved ? colors.green : colors.ink}
+            color={isSaved ? colors.primary : colors.textPrimary}
             name={isSaved ? 'bookmark' : 'bookmark-outline'}
             size={19}
           />
@@ -150,7 +150,7 @@ const styles = StyleSheet.create({
     opacity: 0.88,
   },
   image: {
-    backgroundColor: colors.sand,
+    backgroundColor: colors.secondaryBackground,
   },
   tileImage: {
     height: 142,
@@ -167,7 +167,7 @@ const styles = StyleSheet.create({
   },
   imageScrim: {
     ...StyleSheet.absoluteFill,
-    backgroundColor: 'rgba(18, 30, 24, 0.36)',
+    backgroundColor: colors.scrim,
   },
   copy: {
     flex: 1,
@@ -185,21 +185,21 @@ const styles = StyleSheet.create({
     paddingVertical: spacing.md,
   },
   category: {
-    color: colors.green,
+    color: colors.primary,
     fontSize: 11,
     fontWeight: '700',
     letterSpacing: 0.35,
     textTransform: 'uppercase',
   },
   name: {
-    color: colors.ink,
+    color: colors.textPrimary,
     fontSize: 16,
     fontWeight: '700',
     letterSpacing: -0.2,
     marginTop: spacing.xs,
   },
   featuredEyebrow: {
-    color: 'rgba(255,255,255,0.86)',
+    color: colors.whiteMuted,
     fontSize: 11,
     fontWeight: '700',
     letterSpacing: 1,
@@ -218,13 +218,13 @@ const styles = StyleSheet.create({
     marginTop: spacing.sm,
   },
   locationText: {
-    color: colors.muted,
+    color: colors.textSecondary,
     flex: 1,
     fontSize: 12,
     marginLeft: 3,
   },
   featuredLocationText: {
-    color: 'rgba(255,255,255,0.9)',
+    color: colors.whiteMuted,
     flex: 1,
     fontSize: 13,
     marginLeft: 3,

@@ -9,7 +9,7 @@ interface LoadingStateProps {
 export function LoadingState({ label = 'Finding places…' }: LoadingStateProps) {
   return (
     <View accessibilityRole="progressbar" style={styles.container}>
-      <ActivityIndicator color={colors.green} />
+      <ActivityIndicator color={colors.primary} />
       <Text style={styles.label}>{label}</Text>
     </View>
   );
@@ -23,7 +23,7 @@ const styles = StyleSheet.create({
     padding: spacing.xl,
   },
   label: {
-    color: colors.muted,
+    color: colors.textSecondary,
     fontSize: 14,
     marginLeft: spacing.md,
   },
